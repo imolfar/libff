@@ -40,7 +40,7 @@ std::string FORMAT(const std::string &prefix, const char* format, ...);
 
 /* A variadic template to suppress unused argument warnings */
 template<typename ... Types>
-void UNUSED(Types&&...) {}
+std::string UNUSED(Types&&...) {return "";}
 
 #ifdef DEBUG
 #define FMT FORMAT
