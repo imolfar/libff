@@ -43,9 +43,9 @@ template<typename ... Types>
 std::string UNUSED(Types&&...) {return "";}
 
 #ifdef DEBUG
-#define FMT libff::FORMAT
+#define FMT FORMAT
 #else
-#define FMT(...) (libff::UNUSED(__VA_ARGS__), "")
+#define FMT UNUSED
 #endif
 
 void serialize_bit_vector(std::ostream &out, const bit_vector &v);
